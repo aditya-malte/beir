@@ -88,7 +88,7 @@ class EvaluateRetrieval:
             for k in eval.keys():
                 logger.info("{}: {:.4f}".format(k, eval[k]))
 
-        return ndcg, _map, recall, precision
+        return ndcg, _map, recall, precision, scores
     
     @staticmethod
     def evaluate_custom(qrels: Dict[str, Dict[str, int]], 
